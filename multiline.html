@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="multiline.css">
+    <script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
+    <!--<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>-->
+</head>
+<body>
+
+    
+<div class="templatemo-flex-row">
+
+<!-- Main content --> 
+<div class="templatemo-content col-1 light-gray-bg">
+
+          
+<div class="templatemo-content-container">
+<div class="templatemo-flex-row flex-content-row">
+<div class="templatemo-content-widget white-bg col-2">
+    
+    <div class="chart-wrapper" id="chart-line1"></div>
+    <div text-style="align:center"><h3>Trend of Top 8 Most Popular Dog Breeds, 2007-2017</h3> </div>
+<script type="text/javascript">
+    d3.csv('multiline_data.csv', function(error, data) {
+    data.forEach(function (d) {
+        d.year = +d.year;
+        d.variableA = +d.variableA;
+        d.variableB = +d.variableB;
+        d.variableC = +d.variableC;
+        d.variableD = +d.variableD;
+        d.variableE = +d.variableE;
+        d.variableF = +d.variableF;
+        d.variableG = +d.variableG;
+        d.variableH = +d.variableH;
+    });
+
+    var chart = makeLineChart(data, 'year', {
+        'Labrador Retriever': {column: 'variableA'},
+        'Labrador Mix': {column: 'variableB'},
+        'Golden Retriever': {column: 'variableC'},
+        'Beagle': {column: 'variableD'},
+        'America Pitbull Terrier': {column: 'variableE'},
+        'German Shepherd': {column: 'variableF'},
+        'Shih Tzu': {column: 'variableG'},
+        'Chihuahua': {column: 'variableH'}
+    }, {xAxis: 'Years', yAxis: 'Quantity'});
+    chart.bind("#chart-line1");
+    chart.render();
+
+});
+    
+</script>
+</div>
+</div>
+          <div class="templatemo-flex-row flex-content-row">
+            <div class="templatemo-content-widget white-bg col-2">
+                <h3>Top 8 Dog Breeds Distribution, 2007</h3>
+        <!--2007-->
+                <div class='tableauPlaceholder' id='viz1510786072682' style='position: relative'><noscript><a href='#'><img alt='2007Dogs ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;20&#47;2007Dogs&#47;2007Dogs&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='2007Dogs&#47;2007Dogs' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;20&#47;2007Dogs&#47;2007Dogs&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1510786072682');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                
+            </div>
+              
+              <div class="templatemo-content-widget white-bg col-2">
+                  <h3>Top 8 Dog Breeds Distribution, 2008</h3>
+     <!--2008-->
+                <div class='tableauPlaceholder' id='viz1510788379311' style='position: relative'><noscript><a href='#'><img alt='2008 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Do&#47;Dogs1&#47;2008&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Dogs1&#47;2008' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Do&#47;Dogs1&#47;2008&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1510788379311');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                  
+            </div>
+            </div>
+            
+
+   <div class="templatemo-flex-row flex-content-row">
+    <div class="templatemo-content-widget white-bg col-2">
+        <h3>Top 8 Dog Breeds Distribution, 2009</h3>
+ <!--2009-->
+<div class='tableauPlaceholder' id='viz1510788345762' style='position: relative'><noscript><a href='#'><img alt='2009 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Do&#47;Dogs1&#47;2009&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Dogs1&#47;2009' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Do&#47;Dogs1&#47;2009&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1510788345762');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            </div>
+ <div class="templatemo-content-widget white-bg col-2">
+     <h3>Top 8 Dog Breeds Distribution, 2010</h3>
+     <!--2010-->
+      <div class='tableauPlaceholder' id='viz1510788214839' style='position: relative'><noscript><a href='#'><img alt='2010 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Do&#47;Dogs1&#47;2010&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Dogs1&#47;2010' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Do&#47;Dogs1&#47;2010&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1510788214839');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      
+ </div>
+            </div>
+
+            
+    <!--main content ends-->
+              </div>
+      </div>
+      </div>
+<script src="multiline.js" charset="utf-8"></script>
+    
+
+</body>
+</html>
