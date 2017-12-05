@@ -231,6 +231,7 @@ function makeLineChart(dataset, xName, yObjs, axisLables) {
             //var content="";
             var values="";
             var valuesarray=[];
+            //var textbold = focus.select(".annotation").append("tspan").text("No.1").style("font-weight","bold");
             
             
             for (var y  in yObjs) {
@@ -248,8 +249,9 @@ function makeLineChart(dataset, xName, yObjs, axisLables) {
                 
                 //var content="";
                 var content0="", content1="" , content2="", content3="", content4="", content5="", content6="", content7="";
-                    content0 = names[0] +": "+ valuesarray[0] + " " + "NO.1";
-                    content1 = names[1] +": "+ valuesarray[1] + " " + "NO.2";
+                
+                    content0 = names[0] +": "+ valuesarray[0] + " "+"NO.1" ;
+                    content1 = names[1] +": "+ valuesarray[1] + " "+"NO.2" ;
                     content2 = names[2] +": "+ valuesarray[2] + " ";
                     content3 = names[3] +": "+ valuesarray[3] + " ";
                     content4 = names[4] +": "+ valuesarray[4] + " ";
@@ -257,20 +259,34 @@ function makeLineChart(dataset, xName, yObjs, axisLables) {
                     content6 = names[6] +": "+ valuesarray[6] + " ";
                     content7 = names[7] +": "+ valuesarray[7] + " ";
                 
-                    
+                var fweight2=400,fweight3=400,fweight4=400, fweight5=400, fweight6=400, fweight7=400;
+                
                 for (var i = 2; i < names.length; i++){
                     
-                    if (max < valuesarray[i]){ max = valuesarray[i]; }
+                    if (parseFloat(max) < parseFloat(valuesarray[i])){ max = valuesarray[i]; }
                     
-                }
+                } 
+                
+                
                 switch(max)
-                    { case valuesarray[2]: content2 = names[2] +": "+ valuesarray[2] + " "+" NO.3";break;
-                    case valuesarray[3]: content3 = names[3] +": "+ valuesarray[3] + " "+" NO.3";break;
-                    case valuesarray[4]: content4 = names[4] +": "+ valuesarray[4] + " "+" NO.3";break;
-                    case valuesarray[5]: content5 = names[5] +": "+ valuesarray[5] + " "+" NO.3";break;
-                    case valuesarray[6]: content6 = names[6] +": "+ valuesarray[6] + " "+" NO.3";break;
-                    case valuesarray[7]: content7 = names[7] +": "+ valuesarray[7] + " "+" NO.3";break;
-                    //default:content2 = names[2] +": "+ valuesarray[2] + " "+" NO.3";
+                   { case valuesarray[2]: fweight2=700;
+                           content2 = names[2] +": "+ valuesarray[2] + " "+" NO.3";
+                           break;
+                    case valuesarray[3]: fweight3=700;
+                           content3 = names[3] +": "+ valuesarray[3] + " "+"NO.3";
+                           break;
+                    case valuesarray[4]: fweight4=700;
+                           content4 = names[4] +": "+ valuesarray[4] + " "+"NO.3";
+                           break;
+                    case valuesarray[5]: fweight5=700;
+                           content5 = names[5] +": "+ valuesarray[5] + " "+"NO.3";
+                           break;
+                    case valuesarray[6]: fweight6=700;
+                           content6 = names[6] +": "+ valuesarray[6] + " "+"NO.3";
+                           break;
+                    case valuesarray[7]: fweight7=700;
+                           content7 = names[7] +": "+ valuesarray[7] + " "+"NO.3";
+                           break;
                    }
                 
                // for(var i = 0; i < names.length; i++){
@@ -278,16 +294,17 @@ function makeLineChart(dataset, xName, yObjs, axisLables) {
                  //content += chartObj.yFormatter(yObjs[y].yFunct(d)) + " ";
                 }
             
-            focus.select(".annotation").text(content0);
-            focus.select(".annotation1").text(content1);
-            focus.select(".annotation2").text(content2);
-            focus.select(".annotation3").text(content3);
-            focus.select(".annotation4").text(content4);
-            focus.select(".annotation5").text(content5);
-            focus.select(".annotation6").text(content6);
-            focus.select(".annotation7").text(content7);
+            focus.select(".annotation").text(content0).style("font-weight","700");
+            focus.select(".annotation1").text(content1).style("font-weight","700");
+            focus.select(".annotation2").text(content2).style("font-weight",fweight2);
+            focus.select(".annotation3").text(content3).style("font-weight",fweight3);
+            focus.select(".annotation4").text(content4).style("font-weight",fweight4);
+            focus.select(".annotation5").text(content5).style("font-weight",fweight5);
+            focus.select(".annotation6").text(content6).style("font-weight",fweight6);
+            focus.select(".annotation7").text(content7).style("font-weight",fweight7);
+        
+        
             
-          
             focus.select(".focus.line").attr("transform", "translate(" + chartObj.xScale(chartObj.xFunct(d)) + ")").attr("y1", minY);
             focus.select(".focus.year").text("Year: " + chartObj.xFormatter(chartObj.xFunct(d)));
         }
